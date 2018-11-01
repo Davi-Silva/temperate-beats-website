@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fdfdfd; }
+  body .nav-menu {
+    padding: 30px 0 10px 0;
+    background-color: transparent; }
+    body .nav-menu ul {
+      display: block;
+      text-align: center; }
+      body .nav-menu ul li {
+        display: inline-block;
+        margin: 0 30px 0 30px;
+        hover-text-decoration: none; }
+        body .nav-menu ul li a {
+          color: #000000;
+          font-family: "Seaweed Script";
+          font-size: 30px; }
+      body .nav-menu ul #tb-logo-menu-item a {
+        display: block;
+        font-size: 55px !important;
+        line-height: 35px !important;
+        text-align: right; }
+        body .nav-menu ul #tb-logo-menu-item a img {
+          width: 55px;
+          position: relative;
+          top: -10px;
+          left: 15px; }
+      body .nav-menu ul #tb-logo-menu-item #beats-logo {
+        margin-right: 20px !important; }
+  body .title-sectiion {
+    display: block;
+    height: 1000px; }
+    body .title-sectiion .carousel-title {
+      background-image: url("../img/landscape-1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 508px; }
+
+/*# sourceMappingURL=main.css.map */
