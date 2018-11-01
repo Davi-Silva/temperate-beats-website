@@ -3,7 +3,11 @@
   margin: 0; }
 
 body {
-  background-color: #fdfdfd; }
+  background-color: #fdfdfd;
+  font-family: "Seaweed Script"; }
+  body #section-title {
+    font-size: 45px !important;
+    text-align: center; }
   body .nav-menu {
     padding: 30px 0 10px 0;
     background-color: transparent; }
@@ -33,5 +37,69 @@ body {
   body .title-sectiion {
     display: block;
     height: 1000px; }
+  body .releases-section {
+    display: block; }
+    body .releases-section .see-more-container #see-more-button {
+      float: right; }
+      body .releases-section .see-more-container #see-more-button a {
+        color: #000000;
+        font-family: "Roboto";
+        font-weight: bolder;
+        font-size: 18px; }
+        body .releases-section .see-more-container #see-more-button a:hover {
+          text-decoration: none; }
+    body .releases-section .release-carousel .release-album-container #release-album-img img {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px; }
+  body .shop-section {
+    display: block;
+    padding: 40px 0 40px 0; }
+    body .shop-section .shop-items-container .shop-item-thumbnail img {
+      width: 200px;
+      margin: 10px;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.5); }
+  body .about-section {
+    display: block;
+    padding: 40px 0 40px 0; }
+    body .about-section .about-description #description-text {
+      font-size: 25px;
+      text-align: justify;
+      margin-left: 30px; }
+    body .about-section .learn-more-container {
+      background-color: #fdfdfd;
+      position: absolute;
+      text-align: center;
+      top: -50px;
+      width: 100%;
+      padding: 0 0 25px 0px;
+      border-top-left-radius: 80%;
+      border-top-right-radius: 80%;
+      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5); }
+      body .about-section .learn-more-container a {
+        display: block;
+        text-align: center !important;
+        font-family: "Roboto";
+        color: #000000;
+        font-weight: bolder; }
+  body .footer-section {
+    padding: 70px 0 10px 0; }
+    body .footer-section .copy-right-designed-by-container p {
+      font-family: "Roboto" !important;
+      line-height: 2px;
+      font-size: 16px; }
+      body .footer-section .copy-right-designed-by-container p a {
+        color: #000000;
+        font-family: "Seaweed Script" !important;
+        font-size: 25px; }
+    body .footer-section .social-media-container {
+      display: block; }
+      body .footer-section .social-media-container a {
+        color: #000000; }
+        body .footer-section .social-media-container a i {
+          position: relative;
+          float: right;
+          margin: 0 10px 0 10px;
+          font-size: 35px; }
 
 /*# sourceMappingURL=main.css.map */

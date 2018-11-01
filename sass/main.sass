@@ -4,7 +4,13 @@
 
 body
     background-color: #fdfdfd
+    font-family: "Seaweed Script"
 
+    #section-title
+        font-size: 45px !important
+        text-align: center
+
+    // NAVIGATION BAR
     .nav-menu
         padding: 30px 0 10px 0
         background-color: transparent
@@ -41,8 +47,105 @@ body
                 #beats-logo
                     margin-right: 20px !important
 
-    
-    
+    // TITLE SECTION
     .title-sectiion
         display: block
         height: 1000px
+
+    // RELEASES SECTION
+    .releases-section
+        display: block
+
+        .see-more-container
+            #see-more-button
+                float: right
+                a
+                    color: #000000
+                    font-family: "Roboto"
+                    font-weight: bolder
+                    font-size: 18px
+
+                    &:hover
+                        text-decoration: none
+
+        .release-carousel
+            .release-album-container
+                #release-album-img
+                    img
+                        background-color: rgba(0, 0, 0, 0.5)
+                        padding: 20px
+
+    // SHOP SECTION
+    .shop-section
+        display: block
+        padding: 40px 0 40px 0
+
+        .shop-items-container
+            .shop-item-thumbnail
+                img
+                    width: 200px
+                    margin: 10px
+                    padding: 30px
+                    background-color: rgba(0, 0, 0, 0.5)
+
+    // ABOUT SECTION
+
+    .about-section
+        display: block
+        padding: 40px 0 40px 0
+        .about-description
+            #description-text
+                font-size: 25px
+                text-align: justify
+                margin-left: 30px
+
+        .learn-more-container
+            background-color: #fdfdfd
+            position: absolute
+            text-align: center
+            top: -50px
+            width: 100%
+            padding: 0 0 25px 0px
+            border-top-left-radius: 80%
+            border-top-right-radius: 80%
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, .5)
+
+
+            a
+                display: block
+                text-align: center !important
+                font-family: "Roboto"
+                color: #000000
+                font-weight: bolder
+
+    // FOOTER SECTION
+    .footer-section
+        padding: 70px 0 10px 0
+        .copy-right-designed-by-container
+            p
+                font-family: "Roboto" !important
+                line-height: 2px
+                font-size: 16px
+
+                a
+                    color: #000000
+                    font-family: "Seaweed Script"!important
+                    font-size: 25px
+
+        .social-media-container
+            display: block
+            a
+                color: #000000
+                i
+                    position: relative
+                    float: right
+                    margin: 0 10px 0 10px
+                    font-size: 35px
+                    
+
+
+
+
+
+
+

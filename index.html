@@ -8,12 +8,17 @@
     <title>Temperate Beats</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Seaweed+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="./img/fav-icon.png" />
 </head>
 
 <body>
 
+    <!-- NAVIGATION BAR -->
     <nav class="nav-menu">
         <div class="container">
             <div class="row">
@@ -33,133 +38,185 @@
         </div>
     </nav>
 
+    <!-- CAROUSEL TITLE SECTION -->
     <section class="title-section">
-        <div class="carousel-title">
-            <header class="carousel-title">
-                <h1 id="title"></h1>
-                <h2 id="sub-title"></h2>
-            </header>
-            <div class="carousel-bg">
-                <img src="./img/" alt="Carousel Background Image">
-            </div>
-            <div class="carousel-arrows">
-                <img src="./img/" alt="Carousel Arrows">
-                <img src="./img/" alt="Carousel Arrows">
-            </div>
-            <div class="carousel-dot-indicators">
-                <img src="./img/" alt="Indicator">
-                <img src="./img/" alt="Indicator">
-                <img src="./img/" alt="Indicator">
+        <div class="container">
+            <div class="row">
+                <div class="carousel-title">
+                    <header class="carousel-title">
+                        <h1 id="title"></h1>
+                        <h2 id="sub-title"></h2>
+                    </header>
+                    <div class="carousel-bg">
+                        <img src="./img/" alt="Carousel Background Image">
+                    </div>
+                    <div class="carousel-arrows">
+                        <img src="./img/" alt="Carousel Arrows">
+                        <img src="./img/" alt="Carousel Arrows">
+                    </div>
+                    <div class="carousel-dot-indicators">
+                        <img src="./img/" alt="Indicator">
+                        <img src="./img/" alt="Indicator">
+                        <img src="./img/" alt="Indicator">
+                    </div>
+                </div>
             </div>
         </div>
-
     </section>
 
+    <!-- RELEASES SECTION -->
     <section class="releases-section">
-        <header class="release-header">
-            <h3 id="section-title">Releases</h1>
-        </header>
-        <div class="releases-container">
-            <div class="week-release-container">
-                <div class="releases-top-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="releases-header">
+                        <h3 id="section-title">Releases</h1>
+                    </header>
+                </div>
+                <!-- RELEASES OF THE WEEK -->
+                <div class="col-md-6">
                     <div class="week-title">
                         <h4 id="week-carousel-title">Releases of the week</h2>
                     </div>
-                    <div class="see-more">
-                        <h5 id="see-more-button">SEE MORE</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="see-more-container">
+                        <h5 id="see-more-button"><a href="#">SEE MORE</a></h3>
                     </div>
                 </div>
-                <div class="week-release-carousel">
-                    <div id="release-container">
-                        <div id="release-album-img">
-                            <img src="./img/" alt="">
+                <div class="col-md-12">
+                    <div class="release-carousel">
+                        <div class="release-album-container">
+                            <div id="release-album-img">
+                                <img src="./img/fav-icon.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="month-release-container">\
-                <div class="releases-top-description">
-                    <div class="week-title">
-                        <h2>Releases of the month</h2>
-                    </div>
-                    <div class="see-more">
-                        <h3 id="see-more-button">SEE MORE</h3>
+                <!-- RELEASES OF THE MONTH -->
+                <div class="col-md-6">
+                    <div class="month-title">
+                        <h4 id="month-carousel-title">Releases of the month</h2>
                     </div>
                 </div>
-                <div class="week-release-carousel">
-                    <div id="release-container">
-                        <div id="release-album-img">
-                            <img src="./img/" alt="">
+                <div class="col-md-6">
+                    <div class="see-more-container">
+                        <h5 id="see-more-button"><a href="#">SEE MORE</a></h3>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="release-carousel">
+                        <div class="release-album-container">
+                            <div id="release-album-img">
+                                <img src="./img/fav-icon.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="year-release-container">
-                <div class="releases-top-description">
-                    <div class="week-title">
-                        <h3>Releases of the year</h3>
-                    </div>
-                    <div class="see-more">
-                        <h3 id="see-more-button">SEE MORE</h3>
+                <!-- RELEASES OF THE YEAR -->
+                <div class="col-md-6">
+                    <div class="year-title">
+                        <h4 id="year-carousel-title">Releases of the year</h2>
                     </div>
                 </div>
-                <div class="week-release-carousel">
-                    <div id="release-container">
-                        <div id="release-album-img">
-                            <img src="./img/" alt="">
+                <div class="col-md-6">
+                    <div class="see-more-container">
+                        <h5 id="see-more-button"><a href="#">SEE MORE</a></h3>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="release-carousel">
+                        <div class="release-album-container">
+                            <div id="release-album-img">
+                                <img src="./img/fav-icon.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- SHOP SECTION -->
     <section class="shop-section">
-        <header class="shop-header">
-            <h3 id="section-title">Temperate Shop</h1>
-        </header>
-        <div class="shop-items-container">
-            <div class="shop-item-thumbnail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="shop-header">
+                        <h3 id="section-title">Temperate Shop</h1>
+                    </header>
+                </div>
 
-            </div>
-        </div>
-        <div class="shop-items-container">
-            <div class="shop-item-thumbnail">
-
+                <div class="col-md-12">
+                    <div class="shop-items-container">
+                        <div class="shop-item-thumbnail">
+                            <img src="./img/shirt.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="shop-items-container">
+                        <div class="shop-item-thumbnail">
+                            <img src="./img/shirt.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section class="about-section">
-        <header class="about-header">
-            <h3 id="section-title">About</h3>
-        </header>
-        <article class="about-description">
-            <p class="description-text">Quisque blandit et sapien ac faucibus. Sed in est eu erat commodo posuere et
-                vitae massa. Fusce quis erat in nulla imperdiet tempus. Suspendisse et dolor vitae eros pellentesque
-                suscipit. Morbi faucibus nibh dolor. Integer quis ante quam. Ut finibus sit amet mi eget pulvinar.
-                Donec vitae bibendum neque. Praesent vulputate risus quis vulputate scelerisque. Nullam fringilla
-                cursus augue tristique imperdiet. Etiam convallis cursus purus.</p>
-        </article>
-        <div class="learn-more-container">
-            <b>LEARN MORE</b>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="about-header">
+                        <h3 id="section-title">About</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <article class="about-description">
+                    <p id="description-text">Sed posuere nec turpis sed iaculis. Vivamus interdum dolor vitae erat
+                        elementum, et finibus erat dictum. In bibendum a erat quis hendrerit. Morbi dapibus lectus id
+                        egestas consectetur. Aenean suscipit lacinia leo. Nam placerat dolor in libero imperdiet, vitae
+                        tempor magna tincidunt. Pellentesque ut lorem bibendum, consequat nisl sodales, rhoncus arcu.
+                        Nulla quis dolor nec orci auctor faucibus. Nullam facilisis elementum nunc euismod molestie.
+                        Fusce egestas elementum augue a laoreet. Quisque congue massa id tellus semper, a egestas velit
+                        consequat.</p>
+                </article>
+            </div>
+            <div class="col-md-12">
+                <div class="learn-more-container">
+                    <a href="#"><i>LEARN MORE</i></A>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER SECTION -->
     <footer class="footer-section">
-        <div class="footer-container">
-            <div class="copy-right-designed-by-container">
-                <p id="copy-right"><span>&copy;</span> Temperate Beats <div class="copy-right-year"></div>
-                </p>
-                <p id="designed-by">Designed by <a href="http://davicunhasilva.me/">davicunhasilva</a></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy-right-designed-by-container">
+                        <p id="copy-right"><span>&copy;</span>Temperate Beats <div class="copy-right-year"></div>
+                        </p>
+                        <p id="designed-by">Designed by <a href="http://davicunhasilva.me/">davicunhasilva</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-media-container">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+
             </div>
+        </div>
+        <div class="footer-container">
         </div>
     </footer>
-
-
-
-
     <script src="/js/main.js"></script>
 </body>
 
