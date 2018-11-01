@@ -33,11 +33,5 @@ body {
   body .title-sectiion {
     display: block;
     height: 1000px; }
-    body .title-sectiion .carousel-title {
-      background-image: url("../img/landscape-1.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 508px; }
 
 /*# sourceMappingURL=main.css.map */
