@@ -1,12 +1,20 @@
 // RELEASES SECTION
 let releaseAlbumCarousel: any = document.querySelectorAll(".releases-section .release-carousel");
+let releaseAlbumImg: any = document.querySelectorAll(".releases-section .release-carousel img");
+
+// REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
+
 
 releaseAlbumCarousel.forEach((carousel: any) => {
     let thumb: any = carousel.children[0];
-    let albumName: string[] = ["", "", "", "", ""];
-    let albumImg: string[] = ["", "", "", "", ""];
+    let albumAlt: string[] = ["", "", "", "", ""];
+    let albumImg: string[] = ["album-cover-0.jpg", "album-cover-1.jpg", "album-cover-2.jpg", "album-cover-3.jpg", "album-cover-4.jpg"];
     for (let i = 0; i < 4; i++) {
         let clnThumb: any = thumb.cloneNode(true);
+        let clnThumbImg = clnThumb.children;
+        clnThumbImg[0].src = `./img/${albumImg[i]}`;
+
+        
         carousel.appendChild(clnThumb);
     }
 

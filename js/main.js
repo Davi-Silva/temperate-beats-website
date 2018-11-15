@@ -1,11 +1,15 @@
 // RELEASES SECTION
 var releaseAlbumCarousel = document.querySelectorAll(".releases-section .release-carousel");
+var releaseAlbumImg = document.querySelectorAll(".releases-section .release-carousel img");
+// REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
 releaseAlbumCarousel.forEach(function (carousel) {
     var thumb = carousel.children[0];
-    var albumName = ["", "", "", "", ""];
-    var albumImg = ["", "", "", "", ""];
+    var albumAlt = ["", "", "", "", ""];
+    var albumImg = ["album-cover-0.jpg", "album-cover-1.jpg", "album-cover-2.jpg", "album-cover-3.jpg", "album-cover-4.jpg"];
     for (var i = 0; i < 4; i++) {
         var clnThumb = thumb.cloneNode(true);
+        var clnThumbImg = clnThumb.children;
+        clnThumbImg[0].src = "./img/" + albumImg[i];
         carousel.appendChild(clnThumb);
     }
 });
