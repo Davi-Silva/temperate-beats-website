@@ -16,12 +16,13 @@ body {
       text-align: center; }
       body .nav-menu ul li {
         display: inline-block;
-        margin: 0 30px 0 30px;
-        hover-text-decoration: none; }
+        margin: 0 30px 0 30px; }
         body .nav-menu ul li a {
           color: #000000;
           font-family: "Seaweed Script";
           font-size: 30px; }
+          body .nav-menu ul li a:hover {
+            text-decoration: none; }
       body .nav-menu ul #tb-logo-menu-item a {
         display: block;
         font-size: 55px !important;
@@ -39,26 +40,45 @@ body {
     height: 1000px; }
   body .releases-section {
     display: block; }
-    body .releases-section .see-more-container #see-more-button {
-      float: right; }
-      body .releases-section .see-more-container #see-more-button a {
-        color: #000000;
-        font-family: "Roboto";
-        font-weight: bolder;
-        font-size: 18px; }
-        body .releases-section .see-more-container #see-more-button a:hover {
-          text-decoration: none; }
-    body .releases-section .release-carousel .release-album-container #release-album-img img {
+    body .releases-section .carousel-title-container {
+      padding: 30px 0 0 0; }
+      body .releases-section .carousel-title-container #carousel-title {
+        font-size: 30px; }
+    body .releases-section .see-more-container {
+      padding: 40px 0 0 0; }
+      body .releases-section .see-more-container #see-more-button {
+        float: right; }
+        body .releases-section .see-more-container #see-more-button a {
+          color: #000000;
+          font-family: "Roboto";
+          font-weight: bolder;
+          font-size: 18px; }
+          body .releases-section .see-more-container #see-more-button a:hover {
+            text-decoration: none; }
+    body .releases-section .release-carousel .release-album-container {
+      display: inline-block;
+      width: 217px;
+      height: 217px;
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px; }
+      margin: 2px;
+      border-radius: 3%;
+      transition: all 0.6s; }
+      body .releases-section .release-carousel .release-album-container:hover {
+        transform: scale(1.05, 1.05);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7); }
+      body .releases-section .release-carousel .release-album-container img {
+        border-radius: 3%; }
   body .shop-section {
     display: block;
     padding: 40px 0 40px 0; }
-    body .shop-section .shop-items-container .shop-item-thumbnail img {
-      width: 200px;
-      margin: 10px;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.5); }
+    body .shop-section .shop-items-container .shop-item-thumbnail {
+      display: inline-block; }
+      body .shop-section .shop-items-container .shop-item-thumbnail img {
+        width: 217px;
+        height: 217px;
+        margin: 2px;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.5); }
   body .about-section {
     display: block;
     padding: 40px 0 40px 0; }
@@ -72,16 +92,18 @@ body {
       text-align: center;
       top: -50px;
       width: 100%;
-      padding: 0 0 25px 0px;
-      border-top-left-radius: 80%;
-      border-top-right-radius: 80%;
-      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5); }
+      border-top-left-radius: 90%;
+      border-top-right-radius: 90%;
+      box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5);
+      padding: 5px 500px 20px 500px; }
       body .about-section .learn-more-container a {
         display: block;
         text-align: center !important;
         font-family: "Roboto";
         color: #000000;
         font-weight: bolder; }
+        body .about-section .learn-more-container a:hover {
+          text-decoration: none; }
   body .footer-section {
     padding: 70px 0 10px 0; }
     body .footer-section .copy-right-designed-by-container p {

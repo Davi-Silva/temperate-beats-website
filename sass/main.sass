@@ -28,8 +28,8 @@ body
                     font-family: "Seaweed Script"
                     font-size: 30px
 
-                hover:
-                    text-decoration: none
+                    &:hover
+                        text-decoration: none
 
             #tb-logo-menu-item
                 a
@@ -56,9 +56,18 @@ body
     .releases-section
         display: block
 
+        .carousel-title-container
+            padding: 30px 0 0 0
+
+            #carousel-title
+                font-size: 30px
+
         .see-more-container
+            padding: 40px 0 0 0
+
             #see-more-button
                 float: right
+
                 a
                     color: #000000
                     font-family: "Roboto"
@@ -70,10 +79,20 @@ body
 
         .release-carousel
             .release-album-container
-                #release-album-img
-                    img
-                        background-color: rgba(0, 0, 0, 0.5)
-                        padding: 20px
+                display: inline-block
+                width: 217px
+                height: 217px
+                background-color: rgba(0, 0, 0, .5)
+                margin: 2px
+                border-radius: 3%
+                transition: all .6s
+
+                &:hover
+                    transform: scale(1.05, 1.05)
+                    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7)
+            
+                img
+                    border-radius: 3%
 
     // SHOP SECTION
     .shop-section
@@ -82,9 +101,11 @@ body
 
         .shop-items-container
             .shop-item-thumbnail
+                display: inline-block
                 img
-                    width: 200px
-                    margin: 10px
+                    width: 217px
+                    height: 217px
+                    margin: 2px
                     padding: 30px
                     background-color: rgba(0, 0, 0, 0.5)
 
@@ -93,6 +114,7 @@ body
     .about-section
         display: block
         padding: 40px 0 40px 0
+
         .about-description
             #description-text
                 font-size: 25px
@@ -105,11 +127,10 @@ body
             text-align: center
             top: -50px
             width: 100%
-            padding: 0 0 25px 0px
-            border-top-left-radius: 80%
-            border-top-right-radius: 80%
-            box-shadow: 0px -5px 10px rgba(0, 0, 0, .5)
-
+            border-top-left-radius: 90%
+            border-top-right-radius: 90%
+            box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5)
+            padding: 5px 500px 20px 500px
 
             a
                 display: block
@@ -118,9 +139,13 @@ body
                 color: #000000
                 font-weight: bolder
 
+                &:hover
+                    text-decoration: none
+
     // FOOTER SECTION
     .footer-section
         padding: 70px 0 10px 0
+
         .copy-right-designed-by-container
             p
                 font-family: "Roboto" !important
@@ -129,23 +154,17 @@ body
 
                 a
                     color: #000000
-                    font-family: "Seaweed Script"!important
+                    font-family: "Seaweed Script" !important
                     font-size: 25px
 
         .social-media-container
             display: block
+
             a
                 color: #000000
+
                 i
                     position: relative
                     float: right
                     margin: 0 10px 0 10px
                     font-size: 35px
-                    
-
-
-
-
-
-
-
