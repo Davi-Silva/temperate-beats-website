@@ -1,64 +1,41 @@
+import { elementMethods } from "./elementMethods";
 // REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
 
 // RELEASES SECTION
 
 
-let albumContainer: any = document.createElement('div')
-let aAlbum: any = document.createElement('a');
-let imgAlbum: any = document.createElement('img');
-// Set albumContainer attributes
-albumContainer.className = "release-album-container";
-albumContainer.style.width = "217px";
-albumContainer.style.height = "217px";
-albumContainer.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+// let albumContainer: HTMLElement = document.createElement('div');
+// let aAlbum: any = document.createElement('a');
+// let imgAlbum: any = document.createElement('img');
+// // Set albumContainer attributes
+// albumContainer.className = "release-album-container";
+// albumContainer.style.width = "217px";
+// albumContainer.style.height = "217px";
+// albumContainer.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
 // Set aAlbum attributes
-aAlbum.id = "album-cover";
-aAlbum.href = "#";
+// aAlbum.id = "album-cover";
+// aAlbum.href = "#";
 
-// Set imgAlbum attributes
-imgAlbum.src = "./img/album-cover-1.jpg";
+// // Set imgAlbum attributes
+// imgAlbum.src = "./img/album-cover-1.jpg";
 
-aAlbum.appendChild(imgAlbum);
-albumContainer.appendChild(aAlbum);
-// releaseAlbumCarousel[0].appendChild(albumContainer);
+// aAlbum.appendChild(imgAlbum);
+// albumContainer.appendChild(aAlbum);
+// // releaseAlbumCarousel[0].appendChild(albumContainer);
+
+let elements: any = new elementMethods();
+
+// albumContainer = elements.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 5);
+// elements.fillCarousel();
+
+let albumContainer: HTMLElement = elements.createElement("div", ".release-abum-container");
+console.log(albumContainer);
 
 
-// Set thumbnail attributes 
-function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, height: number, red: number, green: number, blue: number, alpha: number, borderRadius: number): HTMLElement {
-    if (width > 0 && height > 0) {
-        if (red >= 0 && green >= 0 && blue >= 0) {
-            if (borderRadius >= 0) {
-                albumContainer.style.width = `${width}`;
-                albumContainer.style.height = `${height}`;
-                albumContainer.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha});`;
-                albumContainer.style.borderRadius = `${borderRadius}px`;
-            } else {
-                return;
-            }
-        } else {
-            return;
-        }
-    } else {
-        return;
-    }
-    return albumContainer;
-}
 
-// Fill Carousel
-function fillCarousel(carouselId: string): void {
-    let releaseAlbumCarousel: any = document.querySelectorAll(`.releases-section #${carouselId}`);
 
-    releaseAlbumCarousel.forEach((carousel) => {
-        for (let i = 0; i < 5; i++) {
-            let cloneAlbumContainer: any = albumContainer.cloneNode(true);
-            carousel.appendChild(cloneAlbumContainer);
-        }
-    });
-}
 
-albumContainer = setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 5);
-fillCarousel("week-carousel");
 
 // SHOP SECTION
 let shopCarousel: any = document.querySelectorAll(".shop-section .shop-items-container");
