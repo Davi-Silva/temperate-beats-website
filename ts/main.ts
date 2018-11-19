@@ -80,5 +80,4 @@ function fillCarousel(carouselId: HTMLElement): void {
       
     }
   });
-  console.log(releaseAlbumCarousel);
 }

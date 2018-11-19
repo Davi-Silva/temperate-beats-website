@@ -74,5 +74,4 @@ function fillCarousel(carouselId) {
             carousel.appendChild(newAlbumContainer);
         }
     });
-    console.log(releaseAlbumCarousel);
 }
