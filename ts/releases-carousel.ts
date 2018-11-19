@@ -1,19 +1,18 @@
 let periods: any = document.querySelectorAll(".release-carousel");
-periods.forEach((period) => {
+periods.forEach(period => {
   fillCarousel(period);
 });
 
-// Create HTML element
 function createHTMLElement(elementType: string, classNameId: string, href: string, src: number): HTMLElement {
   let element: any = document.createElement(`${elementType}`);
   if (elementType == "a") {
     element.href = `${href}`;
   } else if (elementType == "img") {
-    getAlbumImageCoverFromDB();
-    element.src = `./img/album-cover-${src}.jpg`
+    this.getAlbumImageCoverFromDB();
+    element.src = `./img/releases-album-cover/album-cover-${src}.jpg`;
   }
 
-  if(classNameId.substring(0, 1) == ".") {
+  if (classNameId.substring(0, 1) == ".") {
     element.className = `${classNameId}`;
   } else if (classNameId.substring(0, 1) == "#") {
     element.id = `${classNameId}`;
@@ -32,8 +31,8 @@ function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, heigh
         albumContainer.style.height = `${height}px`;
         albumContainer.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
         albumContainer.style.borderRadius = `${borderRadius}%`;
-        albumContainer.style.margin = `${marginTopBottom}px ${marginRightLeft}px`
-        albumContainer.style.display = "inline-block"
+        albumContainer.style.margin = `${marginTopBottom}px ${marginRightLeft}px`;
+        albumContainer.style.display = "inline-block";
       } else {
         return;
       }
@@ -49,13 +48,13 @@ function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, heigh
 // Create a new individual album container
 function createNewAlbumContainer(imgAlbumCoverSrc: number): HTMLElement {
   // Create each individual element container
-  let albumContainer: HTMLElement = createHTMLElement("div", ".release-abum-container", "", imgAlbumCoverSrc);
-  let aAlbumCover: HTMLElement = createHTMLElement("a", "#album-cover", "#", imgAlbumCoverSrc)
-  let imgAlbumCover: any = createHTMLElement('img', "#album-cover", "", imgAlbumCoverSrc);
+  let albumContainer: HTMLElement = this.createHTMLElement("div", ".release-abum-container", "", imgAlbumCoverSrc);
+  let aAlbumCover: HTMLElement = this.createHTMLElement("a", `#album-cover-${imgAlbumCoverSrc}`, "#", imgAlbumCoverSrc);
+  let imgAlbumCover: any = this.createHTMLElement("img", "", "", imgAlbumCoverSrc);
 
   // Set the thumbnail attributes
-  imgAlbumCover = setThumbnailAttibutes(imgAlbumCover, 217, 217, 0, 0, 0, 0.5, 3, 0, 0)
-  albumContainer = setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 3, 0, 2);
+  imgAlbumCover = this.setThumbnailAttibutes(imgAlbumCover, 217, 217, 0, 0, 0, 0.5, 3, 0, 0);
+  albumContainer = this.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 3, 0, 2);
 
   // Append 'img' into 'a'
   aAlbumCover.appendChild(imgAlbumCover);
@@ -65,19 +64,18 @@ function createNewAlbumContainer(imgAlbumCoverSrc: number): HTMLElement {
 }
 
 // Get the album image cover from the databases
-function getAlbumImageCoverFromDB() {
-
-}
+function getAlbumImageCoverFromDB() {}
 
 // Fill the carousel with each album container
 function fillCarousel(carouselId: HTMLElement): void {
-  let releaseAlbumCarousel: any = document.querySelectorAll(`.releases-section #${carouselId.id}`);
+  let releaseAlbumCarousel: any = document.querySelectorAll(
+    `.releases-section #${carouselId.id}`
+  );
 
   releaseAlbumCarousel.forEach(carousel => {
     for (let i = 0; i < 5; i++) {
-      let newAlbumContainer: any = createNewAlbumContainer(i);
+      let newAlbumContainer: any = this.createNewAlbumContainer(i);
       carousel.appendChild(newAlbumContainer);
-      
     }
   });
 }

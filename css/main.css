@@ -63,9 +63,9 @@ body {
   body .shop-section {
     display: block;
     padding: 40px 0 40px 0; }
-    body .shop-section .shop-items-container .shop-item-thumbnail {
+    body .shop-section .shop-carousel .shop-item {
       display: inline-block; }
-      body .shop-section .shop-items-container .shop-item-thumbnail img {
+      body .shop-section .shop-carousel .shop-item img {
         width: 217px;
         height: 217px;
         margin: 2px;
