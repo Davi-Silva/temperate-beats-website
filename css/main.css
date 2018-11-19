@@ -56,18 +56,10 @@ body {
           body .releases-section .see-more-container #see-more-button a:hover {
             text-decoration: none; }
     body .releases-section .release-carousel .release-album-container {
-      display: inline-block;
-      width: 217px;
-      height: 217px;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 2px;
-      border-radius: 3%;
       transition: all 0.6s; }
       body .releases-section .release-carousel .release-album-container:hover {
         transform: scale(1.05, 1.05);
         box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7); }
-      body .releases-section .release-carousel .release-album-container img {
-        border-radius: 3%; }
   body .shop-section {
     display: block;
     padding: 40px 0 40px 0; }

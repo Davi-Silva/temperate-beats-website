@@ -1,90 +1,41 @@
-// import { elementMethods } from "./elementMethods";
-// REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
+let carouselWeek: HTMLElement = document.querySelector("#week-carousel");
+let carouselMonth: HTMLElement = document.querySelector("#month-carousel");
+let carouselYear: HTMLElement = document.querySelector("#year-carousel");
 
-// let elementMethodHandler = new elementMethods();
-
-// RELEASES SECTION
-
-// let albumContainer: HTMLElement = document.createElement('div');
-// let aAlbum: any = document.createElement('a');
-// let imgAlbum: any = document.createElement('img');
-// // Set albumContainer attributes
-// albumContainer.className = "release-album-container";
-// albumContainer.style.width = "217px";
-// albumContainer.style.height = "217px";
-// albumContainer.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
-// Set aAlbum attributes
-// aAlbum.id = "album-cover";
-// aAlbum.href = "#";
-
-// // Set imgAlbum attributes
-// imgAlbum.src = "./img/album-cover-1.jpg";
-
-// aAlbum.appendChild(imgAlbum);
-// albumContainer.appendChild(aAlbum);
-// // releaseAlbumCarousel[0].appendChild(albumContainer);
-
-// albumContainer = elements.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 5);
-// fillCarousel();
-
-let albumContainer: HTMLElement = createElement(
-  "div",
-  ".release-abum-container"
-);
-console.log(albumContainer);
-
-// SHOP SECTION
-let shopCarousel: any = document.querySelectorAll(
-  ".shop-section .shop-items-container"
-);
-
-shopCarousel.forEach((carousel: any) => {
-  let thumb: any = carousel.children[0];
-  let shopItemName: string[] = ["", "", "", "", ""];
-  let shopItemImg: string[] = ["", "", "", "", ""];
-  for (let i = 0; i < 4; i++) {
-    let clnThumb: any = thumb.cloneNode(true);
-    carousel.appendChild(clnThumb);
-  }
-});
-
-function getShopThumbnailInfo() {}
-
-// releaseAlbumCarousel.forEach((carousel: any) => {
-//     let thumb: any = carousel.children[0];
-//     let albumAlt: string[] = ["", "", "", "", ""];
-//     let albumImg: string[] = ["album-cover-0.jpg", "album-cover-1.jpg", "album-cover-2.jpg", "album-cover-3.jpg", "album-cover-4.jpg"];
-//     for (let i = 0; i < 4; i++) {
-//         let clnThumb: any = thumb.cloneNode(true);
-//         let clnThumbImg = clnThumb.children;
-//         clnThumbImg[0].src = `./img/${albumImg[i]}`;
-
-//         carousel.appendChild(clnThumb);
-//     }
-
-// });
-
-// Get the data from the 'Released Album Info' database with PHP and
-// return it as a JSON file. Then get the JSON file data with typescript
-// and display it on the 'release-album-container' class' children(img).
+fillCarousel(carouselWeek);
+fillCarousel(carouselMonth);
+fillCarousel(carouselYear);
 
 // Create HTML element
-function createElement(elementType: string, classNameId: string): HTMLElement {
-  let element: HTMLElement = document.createElement(`${elementType}`);
-  element.querySelector(`${classNameId}`);
+function createHTMLElement(elementType: string, classNameId: string, href: string, src: number): HTMLElement {
+  let element: any = document.createElement(`${elementType}`);
+  if (elementType == "a") {
+    element.href = `${href}`;
+  } else if (elementType == "img") {
+    element.src = `./img/album-cover-${src}.jpg`
+  }
+
+  if(classNameId.substring(0, 1) == ".") {
+    element.className = `${classNameId}`;
+  } else if (classNameId.substring(0, 1) == "#") {
+    element.id = `${classNameId}`;
+  } else if (classNameId == "") {
+    return element;
+  }
   return element;
 }
 
 // Set thumbnail attributes
-function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, height: number, red: number, green: number, blue: number, alpha: number, borderRadius: number): HTMLElement {
+function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, height: number, red: number, green: number, blue: number, alpha: number, borderRadius: number, marginTopBottom: number, marginRightLeft: number): HTMLElement {
   if (width > 0 && height > 0) {
     if (red >= 0 && green >= 0 && blue >= 0) {
       if (borderRadius >= 0) {
-        albumContainer.style.width = `${width}`;
-        albumContainer.style.height = `${height}`;
-        albumContainer.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha});`;
-        albumContainer.style.borderRadius = `${borderRadius}px`;
+        albumContainer.style.width = `${width}px`;
+        albumContainer.style.height = `${height}px`;
+        albumContainer.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+        albumContainer.style.borderRadius = `${borderRadius}%`;
+        albumContainer.style.margin = `${marginTopBottom}px ${marginRightLeft}px`
+        albumContainer.style.display = "inline-block"
       } else {
         return;
       }
@@ -97,14 +48,40 @@ function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, heigh
   return albumContainer;
 }
 
-// Fill Carousel
-function fillCarousel(carouselId: HTMLElement, albumContainer: HTMLElement): void {
+// Create a new individual album container
+function createNewAlbumContainer(imgAlbumCoverSrc: number): HTMLElement {
+  // Create each individual element container
+  let albumContainer: HTMLElement = createHTMLElement("div", ".release-abum-container", "", imgAlbumCoverSrc);
+  let aAlbumCover: HTMLElement = createHTMLElement("a", "#album-cover", "#", imgAlbumCoverSrc)
+  let imgAlbumCover: any = createHTMLElement('img', "#album-cover", "", imgAlbumCoverSrc);
+
+  // Set the thumbnail attributes
+  imgAlbumCover = setThumbnailAttibutes(imgAlbumCover, 217, 217, 0, 0, 0, 0.5, 3, 0, 0)
+  albumContainer = setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 3, 0, 2);
+
+  // Append 'img' into 'a'
+  aAlbumCover.appendChild(imgAlbumCover);
+  albumContainer.appendChild(aAlbumCover);
+
+  return albumContainer;
+}
+
+// Get the album image cover from the databases
+function getAlbumImageCover() {
+
+}
+
+
+// Fill the carousel with each album container
+function fillCarousel(carouselId: HTMLElement): void {
   let releaseAlbumCarousel: any = document.querySelectorAll(`.releases-section #${carouselId.id}`);
 
-  releaseAlbumCarousel.forEach((carousel) => {
+  releaseAlbumCarousel.forEach(carousel => {
     for (let i = 0; i < 5; i++) {
-      let cloneAlbumContainer: any = albumContainer.cloneNode(true);
-      carousel.appendChild(cloneAlbumContainer);
+      let newAlbumContainer: any = createNewAlbumContainer(i);
+      carousel.appendChild(newAlbumContainer);
+      
     }
   });
+  console.log(releaseAlbumCarousel);
 }
