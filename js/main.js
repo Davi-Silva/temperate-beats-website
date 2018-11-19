@@ -1,9 +1,7 @@
-var carouselWeek = document.querySelector("#week-carousel");
-var carouselMonth = document.querySelector("#month-carousel");
-var carouselYear = document.querySelector("#year-carousel");
-fillCarousel(carouselWeek);
-fillCarousel(carouselMonth);
-fillCarousel(carouselYear);
+var periods = document.querySelectorAll(".release-carousel");
+periods.forEach(function (period) {
+    fillCarousel(period);
+});
 // Create HTML element
 function createHTMLElement(elementType, classNameId, href, src) {
     var element = document.createElement("" + elementType);
@@ -11,6 +9,7 @@ function createHTMLElement(elementType, classNameId, href, src) {
         element.href = "" + href;
     }
     else if (elementType == "img") {
+        getAlbumImageCoverFromDB();
         element.src = "./img/album-cover-" + src + ".jpg";
     }
     if (classNameId.substring(0, 1) == ".") {
@@ -64,7 +63,7 @@ function createNewAlbumContainer(imgAlbumCoverSrc) {
     return albumContainer;
 }
 // Get the album image cover from the databases
-function getAlbumImageCover() {
+function getAlbumImageCoverFromDB() {
 }
 // Fill the carousel with each album container
 function fillCarousel(carouselId) {

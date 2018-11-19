@@ -1,10 +1,7 @@
-let carouselWeek: HTMLElement = document.querySelector("#week-carousel");
-let carouselMonth: HTMLElement = document.querySelector("#month-carousel");
-let carouselYear: HTMLElement = document.querySelector("#year-carousel");
-
-fillCarousel(carouselWeek);
-fillCarousel(carouselMonth);
-fillCarousel(carouselYear);
+let periods: any = document.querySelectorAll(".release-carousel");
+periods.forEach((period) => {
+  fillCarousel(period);
+});
 
 // Create HTML element
 function createHTMLElement(elementType: string, classNameId: string, href: string, src: number): HTMLElement {
@@ -12,6 +9,7 @@ function createHTMLElement(elementType: string, classNameId: string, href: strin
   if (elementType == "a") {
     element.href = `${href}`;
   } else if (elementType == "img") {
+    getAlbumImageCoverFromDB();
     element.src = `./img/album-cover-${src}.jpg`
   }
 
@@ -67,10 +65,9 @@ function createNewAlbumContainer(imgAlbumCoverSrc: number): HTMLElement {
 }
 
 // Get the album image cover from the databases
-function getAlbumImageCover() {
+function getAlbumImageCoverFromDB() {
 
 }
-
 
 // Fill the carousel with each album container
 function fillCarousel(carouselId: HTMLElement): void {
