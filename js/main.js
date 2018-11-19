@@ -1,7 +1,6 @@
-"use strict";
-exports.__esModule = true;
-var elementMethods_1 = require("./elementMethods");
+// import { elementMethods } from "./elementMethods";
 // REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
+// let elementMethodHandler = new elementMethods();
 // RELEASES SECTION
 // let albumContainer: HTMLElement = document.createElement('div');
 // let aAlbum: any = document.createElement('a');
@@ -19,10 +18,9 @@ var elementMethods_1 = require("./elementMethods");
 // aAlbum.appendChild(imgAlbum);
 // albumContainer.appendChild(aAlbum);
 // // releaseAlbumCarousel[0].appendChild(albumContainer);
-var elements = new elementMethods_1.elementMethods();
 // albumContainer = elements.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 5);
-// elements.fillCarousel();
-var albumContainer = elements.createElement("div", ".release-abum-container");
+// fillCarousel();
+var albumContainer = createElement("div", ".release-abum-container");
 console.log(albumContainer);
 // SHOP SECTION
 var shopCarousel = document.querySelectorAll(".shop-section .shop-items-container");
@@ -35,8 +33,7 @@ shopCarousel.forEach(function (carousel) {
         carousel.appendChild(clnThumb);
     }
 });
-function getShopThumbnailInfo() {
-}
+function getShopThumbnailInfo() { }
 // releaseAlbumCarousel.forEach((carousel: any) => {
 //     let thumb: any = carousel.children[0];
 //     let albumAlt: string[] = ["", "", "", "", ""];
@@ -51,3 +48,42 @@ function getShopThumbnailInfo() {
 // Get the data from the 'Released Album Info' database with PHP and
 // return it as a JSON file. Then get the JSON file data with typescript
 // and display it on the 'release-album-container' class' children(img).
+// Create HTML element
+function createElement(elementType, classNameId) {
+    var element = document.createElement("" + elementType);
+    element.querySelector("" + classNameId);
+    return element;
+}
+// Set thumbnail attributes
+function setThumbnailAttibutes(albumContainer, width, height, red, green, blue, alpha, borderRadius) {
+    if (width > 0 && height > 0) {
+        if (red >= 0 && green >= 0 && blue >= 0) {
+            if (borderRadius >= 0) {
+                albumContainer.style.width = "" + width;
+                albumContainer.style.height = "" + height;
+                albumContainer.style.backgroundColor = "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ");";
+                albumContainer.style.borderRadius = borderRadius + "px";
+            }
+            else {
+                return;
+            }
+        }
+        else {
+            return;
+        }
+    }
+    else {
+        return;
+    }
+    return albumContainer;
+}
+// Fill Carousel
+function fillCarousel(carouselId, albumContainer) {
+    var releaseAlbumCarousel = document.querySelectorAll(".releases-section #" + carouselId.id);
+    releaseAlbumCarousel.forEach(function (carousel) {
+        for (var i = 0; i < 5; i++) {
+            var cloneAlbumContainer = albumContainer.cloneNode(true);
+            carousel.appendChild(cloneAlbumContainer);
+        }
+    });
+}

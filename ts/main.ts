@@ -1,8 +1,9 @@
-import { elementMethods } from "./elementMethods";
+// import { elementMethods } from "./elementMethods";
 // REMINDER: CREATE HTML ELEMENT VIA TYPESCRIPT
 
-// RELEASES SECTION
+// let elementMethodHandler = new elementMethods();
 
+// RELEASES SECTION
 
 // let albumContainer: HTMLElement = document.createElement('div');
 // let aAlbum: any = document.createElement('a');
@@ -24,38 +25,31 @@ import { elementMethods } from "./elementMethods";
 // albumContainer.appendChild(aAlbum);
 // // releaseAlbumCarousel[0].appendChild(albumContainer);
 
-let elements: any = new elementMethods();
-
 // albumContainer = elements.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 5);
-// elements.fillCarousel();
+// fillCarousel();
 
-let albumContainer: HTMLElement = elements.createElement("div", ".release-abum-container");
+let albumContainer: HTMLElement = createElement(
+  "div",
+  ".release-abum-container"
+);
 console.log(albumContainer);
 
-
-
-
-
-
 // SHOP SECTION
-let shopCarousel: any = document.querySelectorAll(".shop-section .shop-items-container");
+let shopCarousel: any = document.querySelectorAll(
+  ".shop-section .shop-items-container"
+);
 
 shopCarousel.forEach((carousel: any) => {
-    let thumb: any = carousel.children[0];
-    let shopItemName: string[] = ["", "", "", "", ""];
-    let shopItemImg: string[] = ["", "", "", "", ""];
-    for (let i = 0; i < 4; i++) {
-        let clnThumb: any = thumb.cloneNode(true);
-        carousel.appendChild(clnThumb);
-
-    }
+  let thumb: any = carousel.children[0];
+  let shopItemName: string[] = ["", "", "", "", ""];
+  let shopItemImg: string[] = ["", "", "", "", ""];
+  for (let i = 0; i < 4; i++) {
+    let clnThumb: any = thumb.cloneNode(true);
+    carousel.appendChild(clnThumb);
+  }
 });
 
-function getShopThumbnailInfo() {
-
-}
-
-
+function getShopThumbnailInfo() {}
 
 // releaseAlbumCarousel.forEach((carousel: any) => {
 //     let thumb: any = carousel.children[0];
@@ -66,14 +60,51 @@ function getShopThumbnailInfo() {
 //         let clnThumbImg = clnThumb.children;
 //         clnThumbImg[0].src = `./img/${albumImg[i]}`;
 
-
 //         carousel.appendChild(clnThumb);
 //     }
 
 // });
 
-
 // Get the data from the 'Released Album Info' database with PHP and
 // return it as a JSON file. Then get the JSON file data with typescript
 // and display it on the 'release-album-container' class' children(img).
 
+// Create HTML element
+function createElement(elementType: string, classNameId: string): HTMLElement {
+  let element: HTMLElement = document.createElement(`${elementType}`);
+  element.querySelector(`${classNameId}`);
+  return element;
+}
+
+// Set thumbnail attributes
+function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, height: number, red: number, green: number, blue: number, alpha: number, borderRadius: number): HTMLElement {
+  if (width > 0 && height > 0) {
+    if (red >= 0 && green >= 0 && blue >= 0) {
+      if (borderRadius >= 0) {
+        albumContainer.style.width = `${width}`;
+        albumContainer.style.height = `${height}`;
+        albumContainer.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha});`;
+        albumContainer.style.borderRadius = `${borderRadius}px`;
+      } else {
+        return;
+      }
+    } else {
+      return;
+    }
+  } else {
+    return;
+  }
+  return albumContainer;
+}
+
+// Fill Carousel
+function fillCarousel(carouselId: HTMLElement, albumContainer: HTMLElement): void {
+  let releaseAlbumCarousel: any = document.querySelectorAll(`.releases-section #${carouselId.id}`);
+
+  releaseAlbumCarousel.forEach((carousel) => {
+    for (let i = 0; i < 5; i++) {
+      let cloneAlbumContainer: any = albumContainer.cloneNode(true);
+      carousel.appendChild(cloneAlbumContainer);
+    }
+  });
+}

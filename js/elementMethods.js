@@ -1,7 +1,6 @@
-"use strict";
-exports.__esModule = true;
 var Elements = /** @class */ (function () {
-    function Elements() {}
+    function Elements() {
+    }
     // Create HTML element
     Elements.prototype.createElement = function (elementType, classNameId) {
         var element = document.createElement("" + elementType);
@@ -17,13 +16,16 @@ var Elements = /** @class */ (function () {
                     albumContainer.style.height = "" + height;
                     albumContainer.style.backgroundColor = "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ");";
                     albumContainer.style.borderRadius = borderRadius + "px";
-                } else {
+                }
+                else {
                     return;
                 }
-            } else {
+            }
+            else {
                 return;
             }
-        } else {
+        }
+        else {
             return;
         }
         return albumContainer;
@@ -40,4 +42,4 @@ var Elements = /** @class */ (function () {
     };
     return Elements;
 }());
-exports.elementMethods = Elements;
+// export {Elements as elementMethods};
