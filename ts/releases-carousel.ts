@@ -48,13 +48,13 @@ function setThumbnailAttibutes(albumContainer: HTMLElement, width: number, heigh
 // Create a new individual album container
 function createNewAlbumContainer(imgAlbumCoverSrc: number): HTMLElement {
   // Create each individual element container
-  let albumContainer: HTMLElement = this.createHTMLElement("div", ".release-abum-container", "", imgAlbumCoverSrc);
-  let aAlbumCover: HTMLElement = this.createHTMLElement("a", `#album-cover-${imgAlbumCoverSrc}`, "#", imgAlbumCoverSrc);
-  let imgAlbumCover: any = this.createHTMLElement("img", "", "", imgAlbumCoverSrc);
+  let albumContainer: HTMLElement = createHTMLElement("div", ".release-abum-container", "", imgAlbumCoverSrc);
+  let aAlbumCover: HTMLElement = createHTMLElement("a", `#album-cover-${imgAlbumCoverSrc}`, "#", imgAlbumCoverSrc);
+  let imgAlbumCover: any = createHTMLElement("img", "", "", imgAlbumCoverSrc);
 
   // Set the thumbnail attributes
-  imgAlbumCover = this.setThumbnailAttibutes(imgAlbumCover, 217, 217, 0, 0, 0, 0.5, 3, 0, 0);
-  albumContainer = this.setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 3, 0, 2);
+  imgAlbumCover = setThumbnailAttibutes(imgAlbumCover, 217, 217, 0, 0, 0, 0.5, 3, 0, 0);
+  albumContainer = setThumbnailAttibutes(albumContainer, 217, 217, 0, 0, 0, 0.5, 3, 0, 2);
 
   // Append 'img' into 'a'
   aAlbumCover.appendChild(imgAlbumCover);

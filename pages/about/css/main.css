@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fdfdfd;
+  font-family: "Seaweed Script"; }
+
+#section-title {
+  font-size: 45px !important;
+  text-align: center; }
+
+.nav-menu {
+  padding: 30px 0 10px 0;
+  background-color: transparent; }
+  .nav-menu ul {
+    display: block;
+    text-align: center; }
+    .nav-menu ul li {
+      display: inline-block;
+      margin: 0 30px 0 30px; }
+      .nav-menu ul li a {
+        color: #000000;
+        font-family: "Seaweed Script";
+        font-size: 30px; }
+        .nav-menu ul li a:hover {
+          text-decoration: none; }
+    .nav-menu ul #tb-logo-menu-item a {
+      display: block;
+      font-size: 55px !important;
+      line-height: 35px !important;
+      text-align: right; }
+      .nav-menu ul #tb-logo-menu-item a img {
+        width: 55px;
+        position: relative;
+        top: -10px;
+        left: 15px; }
+    .nav-menu ul #tb-logo-menu-item #beats-logo {
+      margin-right: 20px !important; }
+
+.about-section {
+  display: block;
+  padding: 40px 0 40px 0; }
+  .about-section .about-description #description-text {
+    font-size: 30px;
+    text-align: justify;
+    margin: 0px 100px; }
+  .about-section .learn-more-container {
+    background-color: #fdfdfd;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    width: 100%;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+    box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px 500px 20px 500px; }
+    .about-section .learn-more-container a {
+      display: block;
+      text-align: center !important;
+      font-family: "Roboto";
+      color: #000000;
+      font-weight: bolder; }
+      .about-section .learn-more-container a:hover {
+        text-decoration: none; }
+
+.footer-section {
+  padding: 70px 0 10px 0; }
+  .footer-section .copy-right-designed-by-container p {
+    font-family: "Roboto" !important;
+    line-height: 2px;
+    font-size: 16px; }
+    .footer-section .copy-right-designed-by-container p a {
+      color: #000000;
+      font-family: "Seaweed Script" !important;
+      font-size: 25px; }
+      .footer-section .copy-right-designed-by-container p a:hover {
+        text-decoration: none; }
+  .footer-section .social-media-container {
+    display: block; }
+    .footer-section .social-media-container a {
+      color: #000000; }
+      .footer-section .social-media-container a i {
+        position: relative;
+        float: right;
+        margin: 0 10px 0 10px;
+        font-size: 35px; }
+
+/*# sourceMappingURL=main.css.map */

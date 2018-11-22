@@ -77,7 +77,7 @@ body {
     body .about-section .about-description #description-text {
       font-size: 25px;
       text-align: justify;
-      margin-left: 30px; }
+      margin-left: 25px; }
     body .about-section .learn-more-container {
       background-color: #fdfdfd;
       position: absolute;
@@ -106,6 +106,8 @@ body {
         color: #000000;
         font-family: "Seaweed Script" !important;
         font-size: 25px; }
+        body .footer-section .copy-right-designed-by-container p a:hover {
+          text-decoration: none; }
     body .footer-section .social-media-container {
       display: block; }
       body .footer-section .social-media-container a {
