@@ -43,9 +43,13 @@ body {
       body .contact-section .contact-header h4 {
         line-height: 1px; }
     body .contact-section .form-container {
-      margin: 0 250px;
-      display: block; }
-      body .contact-section .form-container input, body .contact-section .form-container textarea {
+      margin: 65px 250px 0 250px;
+      display: block;
+      border: 1px solid #000000;
+      border-radius: 1%;
+      padding: 20px 50px 20px 50px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
+      body .contact-section .form-container input, body .contact-section .form-container textarea, body .contact-section .form-container span {
         padding: 20px 15px 10px 15px;
         width: 100%;
         border-bottom-color: #000000;
@@ -53,13 +57,12 @@ body {
         border-left: none;
         border-right: none;
         font-family: "Roboto";
-        color: #000000;
-        font-weight: bolder; }
-        body .contact-section .form-container input::placeholder, body .contact-section .form-container textarea::placeholder {
+        color: #000000; }
+        body .contact-section .form-container input::placeholder, body .contact-section .form-container textarea::placeholder, body .contact-section .form-container span::placeholder {
           color: #000000;
           text-align: center;
           font-size: 20px; }
-        body .contact-section .form-container input:focus, body .contact-section .form-container textarea:focus {
+        body .contact-section .form-container input:focus, body .contact-section .form-container textarea:focus, body .contact-section .form-container span:focus {
           outline: none; }
       body .contact-section .form-container .col-md-6 {
         margin: 0;
@@ -68,8 +71,25 @@ body {
         margin: 0;
         padding: 0; }
       body .contact-section .form-container textarea {
-        border-bottom-width: 2px; }
-      body .contact-section .form-container button {
+        border-bottom-width: 2px;
+        resize: none; }
+      body .contact-section .form-container .file-picker-container button {
+        border: 2px solid #000000;
+        background-color: transparent;
+        font-family: "Roboto";
+        font-weight: bolder;
+        padding: 5px 15px 5px 15px;
+        margin: 10px 0 10px 0px;
+        transition: all 0.4s; }
+        body .contact-section .form-container .file-picker-container button:focus {
+          outline: none; }
+        body .contact-section .form-container .file-picker-container button:hover {
+          background-color: #000000;
+          color: #ffffff; }
+      body .contact-section .form-container .file-picker-container span {
+        font-weight: bolder;
+        margin: -10px; }
+      body .contact-section .form-container #submit-btn {
         width: 100%;
         background-color: transparent;
         padding: 10px;
@@ -77,9 +97,13 @@ body {
         color: #000000;
         font-weight: lighter;
         font-size: 30px;
-        border-color: #000000; }
-        body .contact-section .form-container button:focus {
+        border-color: #000000;
+        transition: all 0.4s; }
+        body .contact-section .form-container #submit-btn:focus {
           outline: none; }
+        body .contact-section .form-container #submit-btn:hover {
+          background-color: #000000;
+          color: #ffffff; }
   body .footer-section {
     padding: 70px 0 10px 0; }
     body .footer-section .copy-right-designed-by-container p {

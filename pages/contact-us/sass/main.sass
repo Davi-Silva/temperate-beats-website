@@ -54,15 +54,19 @@ body
 
         .contact-header
             margin: 0 0 40px 0
+
             h4
                 line-height: 1px
-            
 
         .form-container
-            margin: 0 250px
+            margin: 65px 250px 0 250px
             display: block
+            border: 1px solid #000000
+            border-radius: 1%
+            padding: 20px 50px 20px 50px
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5)
 
-            input, textarea
+            input, textarea, span
                 padding: 20px 15px 10px 15px
                 width: 100%
                 border-bottom-color: #000000
@@ -71,7 +75,7 @@ body
                 border-right: none
                 font-family: "Roboto"
                 color: #000000
-                font-weight: bolder
+                // font-weight: bolder
 
                 &::placeholder
                     color: #000000
@@ -89,21 +93,55 @@ body
                 margin: 0
                 padding: 0
 
+
             textarea
                 border-bottom-width: 2px
+                resize: none
 
-            button
-                width: 100%
-                background-color: transparent
-                padding: 10px
-                font-family: "Roboto"
-                color: #000000
-                font-weight: lighter
-                font-size: 30px
-                border-color: #000000
 
-                &:focus
-                    outline: none
+            .file-picker-container
+                button
+                    border: 2px solid #000000
+                    background-color: transparent
+                    font-family: 'Roboto'
+                    font-weight: bolder
+                    padding: 5px 15px 5px 15px
+                    margin: 10px 0 10px 0px
+                    transition: all .4s
+
+                    &:focus
+                        outline: none
+
+                    &:hover
+                        background-color: #000000
+                        color: #ffffff
+
+
+                span
+                    font-weight: bolder
+                    margin: -10px
+
+            
+            #submit-btn
+                    width: 100%
+                    background-color: transparent
+                    padding: 10px
+                    font-family: "Roboto"
+                    color: #000000
+                    font-weight: lighter
+                    font-size: 30px
+                    border-color: #000000
+                    transition: all .4s
+
+                    &:focus
+                        outline: none
+
+                    &:hover
+                        background-color: #000000
+                        color: #ffffff
+
+
+
 
     // FOOTER SECTION
     .footer-section
