@@ -26,7 +26,7 @@
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="./pages/releases/releases.html">RELEASES</a></li>
-                        <li id="tb-logo-menu-item"><a href="index.html"><img src="/img/website menu logo.png" alt="">emperate<br>
+                        <li id="tb-logo-menu-item"><a href="index.html"><img src="/img/website-menu-logo.png" alt="">emperate<br>
                                 <div id="beats-logo">Beats</div>
                             </a></li>
                         <li><a href="./pages/contact-us/contact-us.html">CONTACT US</a></li>
@@ -39,26 +39,25 @@
 
     <!-- CAROUSEL TITLE SECTION -->
     <section class="title-section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="carousel-title">
-                    <header class="carousel-title">
-                        <h1 id="title"></h1>
-                        <h2 id="sub-title"></h2>
-                    </header>
-                    <div class="carousel-bg">
-                        <img src="./img/" alt="Carousel Background Image">
-                    </div>
-                    <div class="carousel-arrows">
-                        <img src="./img/" alt="Carousel Arrows">
-                        <img src="./img/" alt="Carousel Arrows">
-                    </div>
-                    <div class="carousel-dot-indicators">
-                        <img src="./img/" alt="Indicator">
-                        <img src="./img/" alt="Indicator">
-                        <img src="./img/" alt="Indicator">
+                <div class="col-md-12">
+                    <div class="main-title-container">
+                        <h1 id="title">New Releases</h1>
+                        <h2 id="subtitle">Weekly updates</h2>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <a href="#" id="arrow-left"><i class="fas fa-chevron-circle-left" ></i></a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" id="arrow-right"><i class="fas fa-chevron-circle-right"></i></a>
+                </div>
+                <div class="indicators">
+                    <i class="fas fa-circle" id="slide-indicator-0"></i>
+                    <i class="fas fa-circle" id="slide-indicator-1"></i>
+                    <i class="fas fa-circle" id="slide-indicator-2"></i>
+                </div>       
             </div>
         </div>
     </section>
@@ -168,7 +167,9 @@
             </div>
             <div class="col-md-12">
                 <div class="learn-more-container">
-                    <a href="./pages/about/about-page.html"><i>LEARN MORE</i></A>
+                    <a href="./pages/about/about-page.html">
+                        <p>LEARN MORE</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -182,13 +183,13 @@
                     <div class="copy-right-designed-by-container">
                         <p id="copy-right"><span>&copy;</span>Temperate Beats <div class="copy-right-year"></div>
                         </p>
-                        <p id="designed-by">Designed by <a href="http://davicunhasilva.me/">davicunhasilva</a></p>
+                        <p id="designed-by">Designed by <a href="http://davicunhasilva.me/" target="_blank">davicunhasilva</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="social-media-container">
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-soundcloud"></i></a>
+                        <a href="https://soundcloud.com/temperate-beats" target="_blank"><i class="fab fa-soundcloud"></i></a>
                     </div>
                 </div>
             </div>
@@ -196,6 +197,7 @@
         <div class="footer-container">
         </div>
     </footer>
+    <script src="./js/carousel-animation.js"></script>
     <script src="./js/releases-carousel.js"></script>
     <script src="./js/shop-carousel.js"></script>
 </body>

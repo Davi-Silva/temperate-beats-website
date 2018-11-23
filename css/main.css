@@ -35,9 +35,43 @@ body {
           left: 15px; }
       body .nav-menu ul #tb-logo-menu-item #beats-logo {
         margin-right: 20px !important; }
-  body .title-sectiion {
+  body .title-section {
+    background: url(../img/carousel-background-imgs/landscape-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: block;
-    height: 1000px; }
+    margin: 0 auto;
+    height: 510px; }
+    body .title-section .main-title-container {
+      margin: 190px 0px 0px 0px; }
+      body .title-section .main-title-container #title, body .title-section .main-title-container #subtitle {
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0px 5px 1px rgba(0, 0, 0, 0.6); }
+      body .title-section .main-title-container #title {
+        font-size: 65px; }
+      body .title-section .main-title-container #subtitle {
+        font-size: 30px;
+        letter-spacing: 3px;
+        line-height: 0px; }
+    body .title-section #arrow-left, body .title-section #arrow-right {
+      margin-top: -65px;
+      color: #ffffff;
+      font-size: 35px; }
+    body .title-section .indicators {
+      margin: 0 auto;
+      margin-top: 180px;
+      font-size: 23px; }
+      body .title-section .indicators #slide-indicator-0, body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
+        color: #ffffff; }
+      body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
+        opacity: 0.5;
+        transform: scale(0.7, 0.7); }
+    body .title-section #arrow-left {
+      float: left; }
+    body .title-section #arrow-right {
+      position: relative;
+      float: right; }
   body .releases-section {
     display: block; }
     body .releases-section .carousel-title-container {
