@@ -8,32 +8,38 @@ body {
   body #section-title {
     font-size: 45px !important;
     text-align: center; }
-  body .nav-menu {
+  body .nav-menu .nav-menu-container {
     padding: 30px 0 10px 0;
-    background-color: transparent; }
-    body .nav-menu ul {
-      display: block;
-      text-align: center; }
-      body .nav-menu ul li {
-        display: inline-block;
-        margin: 0 30px 0 30px; }
-        body .nav-menu ul li a {
-          color: #000000;
-          font-family: "Seaweed Script";
-          font-size: 30px; }
-          body .nav-menu ul li a:hover {
-            text-decoration: none; }
-      body .nav-menu ul #tb-logo-menu-item a {
+    background-color: transparent;
+    text-align: center; }
+    body .nav-menu .nav-menu-container .col-md-12 .col-md-2 {
+      margin: 0;
+      padding: 0; }
+    body .nav-menu .nav-menu-container .col-md-12 .col-md-4 {
+      margin: 0;
+      padding: 0; }
+    body .nav-menu .nav-menu-container li {
+      display: inline-block;
+      margin: 15px 0 0 0; }
+      body .nav-menu .nav-menu-container li a {
+        color: #000000;
+        font-family: "Seaweed Script";
+        font-size: 30px; }
+        body .nav-menu .nav-menu-container li a:hover {
+          text-decoration: none; }
+    body .nav-menu .nav-menu-container #tb-logo-menu-item {
+      margin: -10px 0 0 0; }
+      body .nav-menu .nav-menu-container #tb-logo-menu-item a {
         display: block;
         font-size: 55px !important;
         line-height: 35px !important;
         text-align: right; }
-        body .nav-menu ul #tb-logo-menu-item a img {
+        body .nav-menu .nav-menu-container #tb-logo-menu-item a img {
           width: 55px;
           position: relative;
           top: -10px;
           left: 15px; }
-      body .nav-menu ul #tb-logo-menu-item #beats-logo {
+      body .nav-menu .nav-menu-container #tb-logo-menu-item #beats-logo {
         margin-right: 20px !important; }
   body .title-section {
     background: url(../img/carousel-background-imgs/landscape-1.jpg);
@@ -53,27 +59,29 @@ body {
       body .title-section .main-title-container #subtitle {
         font-size: 30px;
         letter-spacing: 3px;
-        line-height: 0px; }
+        line-height: 23px; }
     body .title-section #arrow-left, body .title-section #arrow-right {
       margin-top: -65px;
       color: #ffffff;
-      font-size: 35px; }
+      font-size: 35px;
+      cursor: pointer; }
     body .title-section .indicators {
       margin: 0 auto;
-      margin-top: 180px;
-      font-size: 23px; }
+      margin-top: 170px;
+      font-size: 18px; }
       body .title-section .indicators #slide-indicator-0, body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
-        color: #ffffff; }
-      body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
-        opacity: 0.5;
+        color: #ffffff;
         transform: scale(0.7, 0.7); }
+      body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
+        opacity: 0.5; }
     body .title-section #arrow-left {
       float: left; }
     body .title-section #arrow-right {
       position: relative;
       float: right; }
   body .releases-section {
-    display: block; }
+    display: block;
+    padding: 20px 0 0 0; }
     body .releases-section .carousel-title-container {
       padding: 30px 0 0 0; }
       body .releases-section .carousel-title-container #carousel-title {
@@ -111,17 +119,17 @@ body {
     body .about-section .about-description #description-text {
       font-size: 25px;
       text-align: justify;
-      margin-left: 25px; }
+      padding: 0 10px; }
     body .about-section .learn-more-container {
       background-color: #fdfdfd;
-      position: absolute;
       text-align: center;
-      top: -50px;
-      width: 100%;
       border-top-left-radius: 90%;
       border-top-right-radius: 90%;
       box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5);
-      padding: 5px 500px 20px 500px; }
+      margin: 0 auto;
+      margin-top: -85px;
+      display: block;
+      padding: 0 0 30px 0; }
       body .about-section .learn-more-container a {
         display: block;
         text-align: center !important;

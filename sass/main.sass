@@ -12,16 +12,26 @@ body
 
     // NAVIGATION BAR
     .nav-menu
-        padding: 30px 0 10px 0
-        background-color: transparent
-
-        ul
-            display: block
+        .nav-menu-container
+            padding: 30px 0 10px 0
+            background-color: transparent
             text-align: center
+
+            .col-md-12
+                .col-md-2
+                    margin: 0
+                    padding: 0
+
+                .col-md-4
+                    margin: 0
+                    padding: 0
+
+
 
             li
                 display: inline-block
-                margin: 0 30px 0 30px
+                margin: 15px 0 0 0
+
 
                 a
                     color: #000000
@@ -32,6 +42,7 @@ body
                         text-decoration: none
 
             #tb-logo-menu-item
+                margin: -10px 0 0 0
                 a
                     display: block
                     font-size: 55px !important
@@ -45,7 +56,7 @@ body
                         left: 15px
 
                 #beats-logo
-                    margin-right: 20px !important
+                        margin-right: 20px !important
 
     // TITLE SECTION
     .title-section
@@ -70,41 +81,27 @@ body
             #subtitle
                 font-size: 30px
                 letter-spacing: 3px
-                line-height: 0px
+                line-height: 23px
 
         #arrow-left, #arrow-right
             margin-top: -65px
             color: #ffffff
             font-size: 35px
+            cursor: pointer
             
                 
 
         .indicators
             margin: 0 auto
-            margin-top: 180px
-            font-size: 23px
+            margin-top: 170px
+            font-size: 18px
 
             #slide-indicator-0, #slide-indicator-1, #slide-indicator-2
                 color: #ffffff
+                transform: scale(0.7, 0.7)
 
             #slide-indicator-1, #slide-indicator-2
                 opacity: 0.5
-                transform: scale(0.7, 0.7)
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
 
         #arrow-left
             float: left
@@ -117,6 +114,7 @@ body
     // RELEASES SECTION
     .releases-section
         display: block
+        padding: 20px 0 0 0
 
         .carousel-title-container
             padding: 30px 0 0 0
@@ -173,18 +171,18 @@ body
             #description-text
                 font-size: 25px
                 text-align: justify
-                margin-left: 25px
+                padding: 0 10px
 
         .learn-more-container
             background-color: #fdfdfd
-            position: absolute
             text-align: center
-            top: -50px
-            width: 100%
             border-top-left-radius: 90%
             border-top-right-radius: 90%
             box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5)
-            padding: 5px 500px 20px 500px
+            margin: 0 auto
+            margin-top: -85px
+            display: block
+            padding: 0 0 30px 0
 
             a
                 display: block
