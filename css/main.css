@@ -68,7 +68,8 @@ body {
       transform: translateY(-50%);
       color: #ffffff;
       font-size: 35px;
-      cursor: pointer; }
+      cursor: pointer;
+      text-shadow: 0px 5px 1px rgba(0, 0, 0, 0.6); }
     body .title-section .indicators {
       margin: 0 auto;
       margin-top: 170px;
@@ -76,7 +77,8 @@ body {
       text-align: center; }
       body .title-section .indicators #slide-indicator-0, body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
         color: #ffffff;
-        transform: scale(0.7, 0.7); }
+        transform: scale(0.7, 0.7);
+        text-shadow: 0px 3px 5px black; }
       body .title-section .indicators #slide-indicator-1, body .title-section .indicators #slide-indicator-2 {
         opacity: 0.5; }
     body .title-section #arrow-left {
